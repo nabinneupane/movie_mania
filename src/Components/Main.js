@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import CardDisplay from "./DisplayCard/CardDisplay";
 //import ModalPopup from "./DisplayCard/ModalPopup";
 import ModalView from "./DisplayCard/ModalView";
-
+import apiKey from "../apiKey";
 import axios from "axios";
 require("dotenv").config();
 
@@ -13,8 +13,8 @@ const Main = () => {
   const [arr, setArr] = useState([]);
   const [selected, setSelected] = useState({});
 
-  const apiKey_OMDB = process.env.REACT_APP_API_KEY_OMDB;
-
+  const apiKey_OMDB = apiKey.REACT_APP_API_KEY_OMDB;
+  console.log(apiKey_OMDB);
   const api_OMDB = `http://www.omdbapi.com/?apikey=` + apiKey_OMDB;
 
   const handleInput = (e) => {
