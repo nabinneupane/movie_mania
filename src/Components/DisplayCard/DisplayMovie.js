@@ -15,11 +15,17 @@ const DisplayMovie = ({ input, open }) => {
           <Card.Title className="text-center"> {input.Title} </Card.Title>
           <a href="#" className="stretched-link" />
         </Card.Header>
-        <Card.Img
-          className="img-bottom img-fluid "
-          src={input.Poster}
-          alt="Card Img"
-        />
+        {input.Poster !== "N/A" ? (
+          <Card.Img
+            className="img-bottom img-fluid mx-auto"
+            src={input.Poster}
+            alt="Card Img"
+          />
+        ) : (
+          <div className="text-white mx-auto p-2 justify-content-center">
+            No Preview....
+          </div>
+        )}
       </Card>
     </Col>
   );

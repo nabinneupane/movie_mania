@@ -34,46 +34,102 @@ const ModalView = ({ selected, close }) => {
       <Modal.Body className="p-2">
         <Row className="d-flex justify-content-center p-3 ">
           <Col md={5}>
-            <img
-              src={selected.Poster}
-              className="thumbnail "
-              alt="movie poster"
-            />
+            {selected.Poster !== "N/A" ? (
+              <img
+                src={selected.Poster}
+                className="thumbnail "
+                alt="movie poster"
+              />
+            ) : (
+              <div className=" my-5 py-5 text-muted">
+                No image to Display.....
+              </div>
+            )}
           </Col>
           <Col>
             <ul className="list-group list-group-flush">
-              <li className="list-group-item">
-                <strong> Genre: </strong> {selected.Genre}
-              </li>
-              <li className="list-group-item">
-                <strong> Language: </strong> {selected.Language}
-              </li>
-              <li className="list-group-item">
-                <strong> Released: </strong> {selected.Released}
-              </li>
-              <li className="list-group-item">
-                <strong> Rated: </strong> {selected.Rated}
-              </li>
-              <li className="list-group-item">
-                <strong> IMDB Rating: </strong> {selected.imdbRating}
-              </li>
-              <li className="list-group-item">
-                <strong> Director: </strong> {selected.Director}
-              </li>
-              <li className="list-group-item">
-                <strong> Writer: </strong> {selected.Writer}
-              </li>
-              <li className="list-group-item">
-                <strong> Actors: </strong> {selected.Actors}
-              </li>
-              <li className="list-group-item">
-                <strong> Production: </strong> {selected.Production}
-              </li>
+              {selected.Genre !== "N/A" ? (
+                <li className="list-group-item">
+                  <strong> Genre: </strong>
+                  <span> {selected.Genre} </span>
+                </li>
+              ) : (
+                false
+              )}
+
+              {selected.Language !== "N/A" ? (
+                <li className="list-group-item">
+                  <strong> Language: </strong>
+                  <span> {selected.Language} </span>
+                </li>
+              ) : (
+                false
+              )}
+
+              {selected.Released !== "N/A" ? (
+                <li className="list-group-item">
+                  <strong> Released: </strong>
+                  <span> {selected.Released}</span>
+                </li>
+              ) : (
+                false
+              )}
+              {selected.Rated !== "N/A" ? (
+                <li className="list-group-item">
+                  <strong> Rated: </strong>
+                  <span> {selected.Rated} </span>
+                </li>
+              ) : (
+                false
+              )}
+              {selected.imdbRating !== "N/A" ? (
+                <li className="list-group-item">
+                  <strong> IMDB Rating: </strong>
+                  <span> {selected.imdbRating} </span>
+                </li>
+              ) : (
+                false
+              )}
+              {selected.Director !== "N/A" ? (
+                <li className="list-group-item">
+                  <strong> Director: </strong>
+                  <span> {selected.Director} </span>
+                </li>
+              ) : (
+                false
+              )}
+              {selected.Writer !== "N/A" ? (
+                <li className="list-group-item">
+                  <strong> Writer: </strong>
+                  <span> {selected.Writer} </span>
+                </li>
+              ) : (
+                false
+              )}
+
+              {selected.Actors !== "N/A" ? (
+                <li className="list-group-item">
+                  <strong> Actors: </strong>
+                  <span> {selected.Actors} </span>
+                </li>
+              ) : (
+                false
+              )}
+              {selected.Production !== "N/A" ? (
+                <li className="list-group-item">
+                  <strong> Production: </strong>
+                  <span> {selected.Production} </span>
+                </li>
+              ) : (
+                false
+              )}
             </ul>
           </Col>
         </Row>
         <Modal.Title className="display-4 border-top p-2">Plot</Modal.Title>
-        <p className="text-muted"> {selected.Plot}</p>
+        <p className="text-muted">
+          {selected.Plot === "N/A" ? "No plot to display" : selected.Plot}
+        </p>
       </Modal.Body>
       <Modal.Footer className="mx-auto">
         <a
