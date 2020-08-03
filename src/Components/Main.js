@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import LandingPage from "./LandingPage";
 import Container from "react-bootstrap/Container";
 import CardDisplay from "./DisplayCard/CardDisplay";
-import Row from "react-bootstrap/Row";
+//import ModalPopup from "./DisplayCard/ModalPopup";
+import ModalView from "./DisplayCard/ModalView";
+
 import axios from "axios";
 require("dotenv").config();
 
 const Main = () => {
   const [input, setInput] = useState("");
   const [arr, setArr] = useState([]);
+  const [selected, setSelected] = useState({});
 
   const apiKey_OMDB = process.env.REACT_APP_API_KEY_OMDB;
 
@@ -30,14 +33,33 @@ const Main = () => {
           setArr(response);
         })
         .catch((error) => {
-          console.log(error);
+          console.log("Error is: ", error);
+          setArr([]);
         });
     }
+  };
+
+  const openModal = (id) => {
+    const finalSearch = api_OMDB + "&i=" + id;
+    axios(finalSearch).then(({ data }) => {
+      let result = data;
+      console.log(result);
+      setSelected(result);
+    });
+  };
+
+  const closeModal = () => {
+    setSelected({});
   };
   return (
     <Container fluid={true}>
       <LandingPage handleInput={handleInput} searchItems={searchItems} />
-      <CardDisplay arr={arr} />
+      <CardDisplay arr={arr} open={openModal} />
+      {typeof selected.Title != "undefined" ? (
+        <ModalView selected={selected} close={closeModal} />
+      ) : (
+        false
+      )}
     </Container>
   );
 };

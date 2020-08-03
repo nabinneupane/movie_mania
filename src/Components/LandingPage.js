@@ -5,7 +5,7 @@ import { Jumbotron } from "react-bootstrap";
 const LandingPage = ({ handleInput, searchItems }) => {
   return (
     <Jumbotron
-      className="mx-auto w-75 p-2 my-3"
+      className="mx-auto w-75 p-2 my-4"
       style={{ backgroundColor: "darkgrey" }}
     >
       <Col sm={12} md={12}>
