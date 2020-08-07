@@ -14,7 +14,6 @@ const Main = () => {
   const [selected, setSelected] = useState({});
 
   const apiKey_OMDB = apiKey.REACT_APP_API_KEY_OMDB;
-  console.log(apiKey_OMDB);
   const api_OMDB = `//www.omdbapi.com/?apikey=` + apiKey_OMDB;
 
   const handleInput = (e) => {
@@ -29,7 +28,7 @@ const Main = () => {
       axios(finalApiSearch)
         .then(({ data }) => {
           let response = data.Search;
-          console.log(response);
+          // console.log(response);
           setArr(response);
         })
         .catch((error) => {
@@ -43,7 +42,7 @@ const Main = () => {
     const finalSearch = api_OMDB + "&i=" + id;
     axios(finalSearch).then(({ data }) => {
       let result = data;
-      console.log(result);
+      // console.log(result);
       setSelected(result);
     });
   };
