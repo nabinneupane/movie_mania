@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/movie_mania/static/js/main.bb237131.chunk.js",
-    "main.js.map": "/movie_mania/static/js/main.bb237131.chunk.js.map",
+    "main.js": "/movie_mania/static/js/main.1b513211.chunk.js",
+    "main.js.map": "/movie_mania/static/js/main.1b513211.chunk.js.map",
     "runtime-main.js": "/movie_mania/static/js/runtime-main.a6fe5ce6.js",
     "runtime-main.js.map": "/movie_mania/static/js/runtime-main.a6fe5ce6.js.map",
     "static/css/2.829c9cb5.chunk.css": "/movie_mania/static/css/2.829c9cb5.chunk.css",
     "static/js/2.3125085f.chunk.js": "/movie_mania/static/js/2.3125085f.chunk.js",
     "static/js/2.3125085f.chunk.js.map": "/movie_mania/static/js/2.3125085f.chunk.js.map",
     "index.html": "/movie_mania/index.html",
-    "precache-manifest.32d3ae34457f1a56111fe524c9f2020e.js": "/movie_mania/precache-manifest.32d3ae34457f1a56111fe524c9f2020e.js",
+    "precache-manifest.c8598a3b8e158b6784945a6da7ddc342.js": "/movie_mania/precache-manifest.c8598a3b8e158b6784945a6da7ddc342.js",
     "service-worker.js": "/movie_mania/service-worker.js",
     "static/css/2.829c9cb5.chunk.css.map": "/movie_mania/static/css/2.829c9cb5.chunk.css.map",
     "static/js/2.3125085f.chunk.js.LICENSE.txt": "/movie_mania/static/js/2.3125085f.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a6fe5ce6.js",
     "static/css/2.829c9cb5.chunk.css",
     "static/js/2.3125085f.chunk.js",
-    "static/js/main.bb237131.chunk.js"
+    "static/js/main.1b513211.chunk.js"
   ]
 }
