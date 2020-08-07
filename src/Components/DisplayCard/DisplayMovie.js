@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
-import "../../index.css";
+
 const DisplayMovie = ({ input, open }) => {
   return (
     <Col

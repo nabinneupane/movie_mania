@@ -15,7 +15,7 @@ const Main = () => {
 
   const apiKey_OMDB = apiKey.REACT_APP_API_KEY_OMDB;
   console.log(apiKey_OMDB);
-  const api_OMDB = `https://www.omdbapi.com/?apikey=` + apiKey_OMDB;
+  const api_OMDB = `//www.omdbapi.com/?apikey=` + apiKey_OMDB;
 
   const handleInput = (e) => {
     let s = e.target.value;
