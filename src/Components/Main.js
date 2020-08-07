@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import LandingPage from "./LandingPage";
 import Container from "react-bootstrap/Container";
 import CardDisplay from "./DisplayCard/CardDisplay";
-//import ModalPopup from "./DisplayCard/ModalPopup";
 import ModalView from "./DisplayCard/ModalView";
 import apiKey from "../apiKey";
 import axios from "axios";
-require("dotenv").config();
 
 const Main = () => {
   const [input, setInput] = useState("");
@@ -28,7 +26,6 @@ const Main = () => {
       axios(finalApiSearch)
         .then(({ data }) => {
           let response = data.Search;
-          // console.log(response);
           setArr(response);
         })
         .catch((error) => {
@@ -42,7 +39,7 @@ const Main = () => {
     const finalSearch = api_OMDB + "&i=" + id;
     axios(finalSearch).then(({ data }) => {
       let result = data;
-      // console.log(result);
+
       setSelected(result);
     });
   };

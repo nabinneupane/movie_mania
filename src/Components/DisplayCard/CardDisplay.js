@@ -1,9 +1,7 @@
-/* eslint-disable jsx-a11y/heading-has-content */
 import React from "react";
 import DisplayMovie from "./DisplayMovie";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
 const CardDisplay = ({ arr, open }) => {
   return (

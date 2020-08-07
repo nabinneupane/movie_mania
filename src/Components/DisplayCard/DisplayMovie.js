@@ -13,8 +13,8 @@ const DisplayMovie = ({ input, open }) => {
       <Card className="mx-auto flex-fill shadow text-white bg-secondary border-light ">
         <Card.Header>
           <Card.Title className="text-center"> {input.Title} </Card.Title>
-          <a href="#" className="stretched-link" />
         </Card.Header>
+        <a href="#" className="stretched-link" />
         {input.Poster !== "N/A" ? (
           <Card.Img
             className="img-bottom img-fluid mx-auto"
