@@ -11,8 +11,8 @@ const CardDisplay = ({ arr, open }) => {
       <Row className="justify-content-center">
         {typeof arr === "undefined" ? (
           <Row className="h3 mx-auto text-dark  py-5 my-5">
-            Oops.... There are no films with corresponding name. Please try a
-            new one..
+            Oops... There are no films with corresponding name. Please try a new
+            one...
           </Row>
         ) : (
           arr.map((value) => (
